@@ -4,24 +4,24 @@ import { useEffect, useRef, useState } from "react"
 
 const features = [
   {
-    title: "Autonomous Systems",
+    title: "Autonomous Navigation",
     description:
-      "Next-generation autonomous platforms designed for precision operations in complex environments. Engineered for reliability.",
+      "Advanced path planning and obstacle avoidance systems enable precise underwater navigation without human intervention.",
   },
   {
-    title: "Advanced Sensors",
+    title: "Underwater Vision",
     description:
-      "State-of-the-art sensor fusion technology delivering unparalleled situational awareness across all domains.",
+      "High-resolution camera systems with real-time image processing for object detection and environment mapping.",
   },
   {
-    title: "AI Integration",
+    title: "Sensor Fusion",
     description:
-      "Machine learning algorithms optimized for real-time decision making and adaptive response capabilities.",
+      "Integration of multiple sensor inputs including sonar, IMU, and pressure sensors for accurate localization.",
   },
   {
-    title: "Secure Networks",
+    title: "Robust Control Systems",
     description:
-      "Encrypted communication systems ensuring operational integrity and data protection at every level.",
+      "PID-based control architecture ensures stable movement and precise maneuvering in dynamic conditions.",
   },
 ]
 
@@ -55,31 +55,35 @@ function FeatureCard({
   return (
     <div
       ref={ref}
-      className={`group p-8 border border-border bg-card hover:border-foreground/30 transition-all duration-500 ${
+      className={`group p-8 border border-[#1a3a5c] bg-[#041225]/50 hover:border-[#00B4D8]/50 hover:shadow-[0_0_30px_rgba(0,180,216,0.1)] transition-all duration-500 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       {/* Placeholder image */}
-      <div className="aspect-video w-full border border-border/50 flex items-center justify-center text-muted-foreground/40 text-xs tracking-[0.3em] uppercase mb-6 group-hover:border-foreground/20 transition-colors duration-300">
+      <div className="aspect-video w-full border border-[#1a3a5c]/50 bg-[#020B1C] flex items-center justify-center text-[#00B4D8]/30 text-xs tracking-[0.3em] uppercase mb-6 group-hover:border-[#00B4D8]/30 transition-colors duration-300">
         FEATURE IMAGE
       </div>
 
-      <h3 className="text-xl text-foreground tracking-[0.1em] mb-4">{feature.title}</h3>
-      <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+      <h3 className="text-xl text-white tracking-[0.05em] mb-4 group-hover:text-[#00B4D8] transition-colors duration-300">
+        {feature.title}
+      </h3>
+      <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
     </div>
   )
 }
 
 export function Features() {
   return (
-    <section id="technology" className="py-32 bg-background">
+    <section id="features" className="py-32 bg-[#020B1C]">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl text-foreground tracking-[0.1em] mb-4">TECHNOLOGY</h2>
-          <p className="text-muted-foreground tracking-[0.15em] uppercase text-sm">
-            Engineered for the future
+          <p className="text-[#00B4D8] tracking-[0.3em] uppercase text-sm mb-4">
+            Capabilities
           </p>
+          <h2 className="text-3xl md:text-4xl text-white tracking-[0.05em]">
+            System Features
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

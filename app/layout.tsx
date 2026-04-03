@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'NEXUS | Building the Future of Defense Technology',
-  description: 'Precision. Innovation. Control. Leading the next generation of autonomous systems and defense technology.',
+  title: 'JalAnveshak | Autonomous Underwater Exploration System',
+  description: 'Precision beneath the surface. Advanced autonomous underwater vehicle for exploration and research.',
   generator: 'v0.app',
   icons: {
     icon: [
