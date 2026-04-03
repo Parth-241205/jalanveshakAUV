@@ -4,29 +4,18 @@ import { useEffect, useRef, useState } from "react"
 
 const teamMembers = [
   {
-    name: "Team Member 1",
-    role: "Robotics Engineer",
+    name: "Parthiv Bhatt",
+    role: "Team Lead, Control Systems",
   },
   {
-    name: "Team Member 2",
-    role: "Embedded Systems",
-  },
-  {
-    name: "Team Member 3",
-    role: "Navigation Lead",
-  },
-  {
-    name: "Team Member 4",
+    name: "Hussain Sathaliya",
     role: "Software Developer",
   },
   {
-    name: "Team Member 5",
-    role: "Mechanical Design",
+    name: "Diya Thakkar",
+    role: "Managing Lead, Embedded Architecture",
   },
-  {
-    name: "Team Member 6",
-    role: "Control Systems",
-  },
+
 ]
 
 function TeamCard({
@@ -59,9 +48,8 @@ function TeamCard({
   return (
     <div
       ref={ref}
-      className={`group text-center transition-all duration-500 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-      }`}
+      className={`group text-center transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       {/* Profile image placeholder */}

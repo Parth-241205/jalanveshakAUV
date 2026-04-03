@@ -9,10 +9,10 @@ const footerLinks = {
     { name: "Contact", href: "#contact" },
   ],
   social: [
-    { name: "LinkedIn", href: "#linkedin" },
-    { name: "GitHub", href: "#github" },
+
+
     { name: "Instagram", href: "#instagram" },
-    { name: "YouTube", href: "#youtube" },
+
   ],
 }
 
