@@ -48,7 +48,7 @@ function TeamCard({
   return (
     <div
       ref={ref}
-      className={`group text-center transition-all duration-500 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      className={`group text-center transition-all duration-500 w-[200px] ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
         }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
@@ -76,7 +76,7 @@ export function Team() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 justify-center">
+        <div className="flex flex-wrap justify-center gap-12">
           {teamMembers.map((member, index) => (
             <TeamCard key={member.name} member={member} index={index} />
           ))}
