@@ -11,7 +11,7 @@ const footerLinks = {
   social: [
 
 
-    { name: "Instagram", href: "#instagram" },
+    { name: "Instagram", href: "https://www.instagram.com/jalanveshak2.0/" },
 
   ],
 }
