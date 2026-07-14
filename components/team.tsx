@@ -1,28 +1,31 @@
 "use client"
 
+import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 
 const teamMembers = [
   {
     name: "Parthiv Bhatt",
     role: "Team Lead, Control Systems",
+    image: "/images/parthiv_bhatt.jpeg",
   },
   {
     name: "Hussain Sathaliya",
     role: "Software Developer",
+    image: "/images/hussain_sathaliya.jpg",
   },
   {
     name: "Diya Thakkar",
     role: "Managing Lead, Embedded Architecture",
+    image: "/images/diya_thakkar.jpeg",
   },
-
 ]
 
 function TeamCard({
   member,
   index,
 }: {
-  member: { name: string; role: string }
+  member: { name: string; role: string; image: string }
   index: number
 }) {
   const ref = useRef<HTMLDivElement>(null)
@@ -52,9 +55,14 @@ function TeamCard({
         }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      {/* Profile image placeholder */}
-      <div className="aspect-square w-full max-w-[200px] mx-auto border border-[#1a3a5c] bg-[#041225] flex items-center justify-center text-[#00B4D8]/30 text-xs tracking-[0.2em] uppercase mb-4 group-hover:border-[#00B4D8]/50 transition-colors duration-300">
-        PROFILE
+      <div className="relative aspect-square w-full max-w-[200px] mx-auto overflow-hidden rounded-full border-2 border-[#1a3a5c] bg-[#041225] mb-4 group-hover:border-[#00B4D8]/50 shadow-[0_0_24px_rgba(0,180,216,0.12)] transition-all duration-300">
+        <Image
+          src={member.image}
+          alt={member.name}
+          fill
+          sizes="(max-width: 768px) 50vw, 200px"
+          className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+        />
       </div>
 
       <h3 className="text-lg text-white tracking-[0.05em] mb-1">{member.name}</h3>
@@ -76,7 +84,7 @@ export function Team() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 max-w-3xl mx-auto">
           {teamMembers.map((member, index) => (
             <TeamCard key={member.name} member={member} index={index} />
           ))}
